@@ -1,0 +1,10 @@
+dask==2024.7.1
+dask-cloudprovider==2022.10.0
+botocore<1.34.45
+boto3==1.34.44
+NumPy version >=1.22.4 and <1.29.0
+
+conda remove -n repro_suite --yes dask dask-cloudprovider numpy 
+
+
+conda install -n repro_suite --yes -c conda-forge dask=2024.7.1 dask-cloudprovider=2022.10.0  boto3=1.34.44 aiobotocore>=0.10.2 s3fs fsspec numpy<1.29.0 tornado>=5
